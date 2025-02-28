@@ -1,9 +1,9 @@
 [submodule "infra"]
 	path = infra
-	url = ./infra
+	url = https://github.com/damasceno-dev/devstage-infra.git
 [submodule "server"]
 	path = server
-	url = ./server
+	url = https://github.com/damasceno-dev/devstage-backend.git
 [submodule "web"]
 	path = web
-	url = ./web
+	url = https://github.com/damasceno-dev/devstage-frontend.git
