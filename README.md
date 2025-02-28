@@ -37,11 +37,10 @@ cp .secrets.example .secrets
 ```
 
 4. Edit the `.secrets` file with your AWS credentials and configuration:
-```
 # AWS credentials
-AWS ADMIN is the aws profile that is going to give the AWS RESOURCE CREATOR profile permission to create all resources needed by this app
-AWS RESOURCES CREATOR is the aws profile that is going to create this resources
-```
+* AWS ADMIN is the aws profile that is going to give the AWS RESOURCE CREATOR profile permission to create all resources needed by this app
+* AWS RESOURCES CREATOR is the aws profile that is going to create this resources
+
 
 5. Export the secrets to base64 and create and add them to a github variable called ENCODED_SECRETS:
 
@@ -53,9 +52,8 @@ base64 -i .secrets
 On commit or using some tool to run the workflow locally (i. e: act), the '1-deploy.yml' will run the steps defined in the folder 1-admin and 2-resources
 If you using act on mac, this is the command to run the workflow locally. Run it in the root of the infra folder:
 
-```
 act -s ENCODED_SECRETS="$(base64 -i .secrets | tr -d '\n')" --container-architecture linux/amd64
-```
+
 
 After successful deployment, note down the following outputs:
 - ECR Repository URL
@@ -90,7 +88,6 @@ cp DevStage.API/appsettings.Example.json DevStage.API/appsettings.Production.jso
 {
     "ConnectionStrings": {
     "DefaultConnection": "Server=your-rds-endpoint;Port=5432;Database=yourdb;User Id=youruser;Password=yourpassword;"
-    },
         ...
 }
 ```
@@ -186,5 +183,5 @@ The application has continuous integration and deployment set up:
 
 
 ## Destory workflow:
-In the infra submodule, execute workflows/destroy.yml manually to destroy all infra and server resources.
-In AWS Amplify, App settings, click on Delete app 
+1. In the infra submodule, execute workflows/destroy.yml manually to destroy all infra and server resources.
+2. In AWS Amplify, App settings, click on Delete app 
