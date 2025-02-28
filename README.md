@@ -93,7 +93,7 @@ base64 -i appsettings.Production.json
 base64 -i .secrets
 ```
 
-2Add these as secrets in your GitHub repository:
+2. Add these as secrets in your GitHub repository:
 - Go to your GitHub repository → Settings → Secrets and variables → Actions
 - Add `APPSETTINGS_PRODUCTION_JSON_B64` with the base64 encoded appsettings.Production.json
 - Add `ENCODED_SECRETS` with the base64 encoded .secrets
