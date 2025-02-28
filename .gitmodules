@@ -1,0 +1,9 @@
+[submodule "infra"]
+	path = infra
+	url = ./infra
+[submodule "server"]
+	path = server
+	url = ./server
+[submodule "web"]
+	path = web
+	url = ./web
