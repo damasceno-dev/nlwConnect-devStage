@@ -80,7 +80,7 @@ cp DevStage.API/appsettings.Example.json DevStage.API/appsettings.Production.jso
 ```
 {
     "ConnectionStrings": {
-    "DefaultConnection": "Server=your-rds-endpoint;Port=5432;Database=yourdb;User Id=youruser;Password=yourpassword;",
+    "DefaultConnection": "Server=your-rds-endpoint;Port=5432;Database=yourdb;User Id=youruser;Password=yourpassword;"
         ...
 }
 ```
