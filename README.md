@@ -171,6 +171,7 @@ The application has continuous integration and deployment set up:
 - For web deployment issues, check the AWS Amplify build logs.
 
 
-## Destory workflow:
+## Destroy workflow:
 1. In the infra submodule, execute workflows/destroy.yml manually to destroy all infra and server resources.
 2. In AWS Amplify, App settings, click on Delete app 
+3. Manually delete the s3 bucket and the initial policy created in step 1.1.2
